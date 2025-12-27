@@ -233,33 +233,74 @@
 .schools {
   padding: 80px 0;
 }
-.schools .schools__grid {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  gap: clamp(20px, 4vw, 30px);
-  overflow: auto;
+
+/* Wrapper */
+.schools__grid {
+  overflow: hidden;
   margin-bottom: 30px;
+  position: relative;
 }
-.schools .schools__grid::-webkit-scrollbar {
-  display: none;
+
+/* Track */
+.schools__track {
+  display: flex;
+  gap: clamp(20px, 4vw, 30px);
+  width: -moz-max-content;
+  width: max-content;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
-.schools .schools__grid .card {
+
+/* Pause on hover & focus */
+.schools__grid:focus-within .schools__track,
+.schools__grid:hover .schools__track {
+  animation-play-state: paused;
+}
+
+/* Direction modifiers */
+.schools__grid--ltr .schools__track {
+  animation-name: marquee-ltr;
+}
+
+.schools__grid--rtl .schools__track {
+  animation-name: marquee-rtl;
+}
+
+/* Cards */
+.card {
   min-width: 274px;
-  width: 100vw;
-  background: var(--color-white);
+  height: 120px;
+  background: #ffffff;
+  border: 1px solid #E8E7E7;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #E8E7E7;
-  height: 120px;
   padding: 10px;
 }
-.schools .schools__grid .card img {
-  width: auto;
+
+.card img {
   height: calc(100% - 10px);
+  width: auto;
 }
 
+/* Animations */
+@keyframes marquee-ltr {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes marquee-rtl {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 .categories {
   padding: 80px 0;
 }
@@ -305,4 +346,46 @@
   font-size: 18px;
   line-height: 1.5em;
   font-weight: 400;
+}
+
+.appointment {
+  background: linear-gradient(270deg, rgba(234, 215, 255, 0.368627451) 28%, #dec1ff 61%), url("../Images/pre-shudule.jpg") no-repeat right/cover;
+  overflow-x: hidden;
+}
+.appointment .appointment__grid {
+  padding-left: clamp(40px, 9vw, 100px);
+}
+.appointment .appointment__grid .appointment__content {
+  padding: clamp(40px, 34vh, 173px) 0;
+  max-width: 651px;
+  font-family: Open Sans;
+}
+.appointment .appointment__grid .appointment__content .appointment__sub-text {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-style: Italic;
+  font-size: 32px;
+  line-height: 1.2em;
+  letter-spacing: 0;
+  background: linear-gradient(270deg, #755797 0%, #9B4DF0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.appointment .appointment__grid .appointment__content .section-title {
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 1.3em;
+  text-align: start;
+  font-family: Open Sans;
+  margin-bottom: 0;
+}
+.appointment .appointment__grid .appointment__content .appointment__subtitle {
+  background: linear-gradient(270deg, #755797 0%, #9B4DF0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 400;
+  font-style: Italic;
+  font-size: 32px;
+  line-height: 1.2em;
+  margin-bottom: 40px;
 }/*# sourceMappingURL=sections.css.map */

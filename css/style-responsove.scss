@@ -45,6 +45,12 @@
     }
 }
 @media (max-width:800px) {
+    .header__logo{
+        width: 120px;
+        img{
+            width: 100%;
+        }
+    }
     .hero {
         height: auto;
         max-height: unset;
@@ -82,7 +88,7 @@
     // ----------------- 2nd section css end ------------------------------------------------
 
     .categories {
-    padding: 00px 0;
+    padding: 00px 0 40px 0;
     .categories__grid {
         .card {
             width: 100%;
@@ -91,4 +97,30 @@
         }
     }
     }
+
+
+
+
+    // ----------------- appointment section css start ------------------------------------------------
+
+    .appointment {
+
+    .appointment__grid {
+        padding-left: clamp(20px, 1vw, 100px);
+        .appointment__content {
+            padding: 60px 0;
+            .appointment__sub-text {
+                font-size: 27px;
+            }
+            .section-title {
+                font-size: 34px;
+            }
+            .appointment__subtitle {
+                font-size: 27px;
+
+            }
+        }
+    }
+}
+// ----------------- appointment section css end ------------------------------------------------
 }

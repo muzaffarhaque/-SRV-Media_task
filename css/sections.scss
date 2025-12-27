@@ -256,33 +256,75 @@
 // ------------------ 3rd section css start ------------------------------------------------
 .schools {
     padding: 80px 0;
-    .schools__grid {
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        gap: clamp(20px,4vw,30px);
-        overflow: auto;
-        margin-bottom: 30px;
-        &::-webkit-scrollbar {
-            display: none;
-        }
-        .card {
-            min-width: 274px;
-            width: 100vw;
-            background: var(--color-white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #E8E7E7;
-            height: 120px;
-            padding: 10px;
-            img {
-                width: auto;
-                height: calc(100% - 10px);
-            }
-        }
+}
+
+/* Wrapper */
+.schools__grid {
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Track */
+.schools__track {
+    display: flex;
+    gap: clamp(20px, 4vw, 30px);
+    width: max-content;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Pause on hover & focus */
+.schools__grid:focus-within .schools__track,
+.schools__grid:hover .schools__track {
+    animation-play-state: paused;
+}
+
+/* Direction modifiers */
+.schools__grid--ltr .schools__track {
+    animation-name: marquee-ltr;
+}
+
+.schools__grid--rtl .schools__track {
+    animation-name: marquee-rtl;
+}
+
+/* Cards */
+.card {
+    min-width: 274px;
+    height: 120px;
+    background: #ffffff;
+    border: 1px solid #E8E7E7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.card img {
+    height: calc(100% - 10px);
+    width: auto;
+}
+
+/* Animations */
+@keyframes marquee-ltr {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
     }
 }
+@keyframes marquee-rtl {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 // ------------------ 3rd section css end ------------------------------------------------
 // 
 // 
@@ -319,14 +361,14 @@
                 background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%), url("../Images/categories4.png") no-repeat center;
                 background-size: cover;
             }
-            h6{
+            h6 {
                 font-size: 20px;
                 line-height: 1.2em;
                 font-weight: 700;
                 margin-bottom: 12px;
                 width: 100%;
             }
-            p{
+            p {
                 font-size: 18px;
                 line-height: 1.5em;
                 font-weight: 400;
@@ -337,4 +379,48 @@
 }
 // 
 // 
+
+.appointment {
+    background: linear-gradient(270deg, #ead7ff5e 28%, #dec1ff 61%), url("../Images/pre-shudule.jpg") no-repeat right / cover;
+    overflow-x: hidden;
+    .appointment__grid {
+        padding-left: clamp(40px, 9vw, 100px);
+        .appointment__content {
+            padding: clamp(40px, 34vh, 173px) 0;
+            max-width: 651px;
+            font-family: Open Sans;
+            .appointment__sub-text {
+                font-family: Open Sans;
+                font-weight: 400;
+                font-style: Italic;
+                font-size: 32px;
+                line-height: 1.2em;
+                letter-spacing: 0;
+                background: linear-gradient(270deg, #755797 0%, #9B4DF0 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+            }
+            .section-title {
+                font-weight: 500;
+                font-size: 64px;
+                line-height: 1.3em;
+                text-align: start;
+                font-family: Open Sans;
+                margin-bottom: 0;
+            }
+            .appointment__subtitle {
+                background: linear-gradient(270deg, #755797 0%, #9B4DF0 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 400;
+                font-style: Italic;
+                font-size: 32px;
+                line-height: 1.2em;
+                margin-bottom: 40px;
+
+            }
+        }
+    }
+}
 //
