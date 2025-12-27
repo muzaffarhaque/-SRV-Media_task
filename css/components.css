@@ -1,0 +1,70 @@
+.button {
+  
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+.button--secondary,
+.button--primary {
+    color: var(--color-primary);
+    height: 60px;
+    width: 100%;
+    max-width: 205px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-secondary);
+    background-color: var(--color-white);
+    border-radius: 8px 4px 4px 8px;
+    overflow: hidden;
+}
+.button--secondary .arrow-box,
+.button--primary .arrow-box {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    width: 60px;
+    min-width: 60px;
+    height: 100%;
+    background: var(--color-secondary);
+
+}
+.button--secondary .arrow-box{
+  background: var(--color-white);
+}
+.button--secondary p,
+.button--primary  p {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.button--secondary {
+    background: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+.input-box{
+
+}
+.card {
+    padding: 40px;
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+}
+
+.card--overlay {
+    background: linear-gradient(180deg, rgba(0,0,0,.5), rgba(0,0,0,.8));
+    color: white;
+}
