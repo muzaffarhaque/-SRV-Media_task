@@ -76,7 +76,7 @@
     aspect-ratio: 1.3;
   }
   .categories {
-    padding: 0px 0 40px 0;
+    padding: 0 0 40px;
   }
   .categories .categories__grid .card {
     width: 100%;
@@ -97,5 +97,39 @@
   }
   .appointment .appointment__grid .appointment__content .appointment__subtitle {
     font-size: 27px;
+  }
+  .exhibition {
+    padding: 40px 0;
+    max-height: unset;
+  }
+  .exhibition .section-title {
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 60px;
+    font-family: "0pen Sans", sans-serif;
+    font-size: 600;
+  }
+  .exhibition .exhibition__grid .exhibition__item {
+    width: clamp(200px, 100vw, 347px);
+    min-width: 330px;
+    padding-bottom: 10px;
+  }
+  .footer {
+    padding: 40px 0;
+  }
+  .footer .footer__container {
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer .footer__container .footer_logo {
+    height: 120px;
+    width: auto;
+  }
+  .footer .footer__container .footer__inner {
+    width: 100%;
+  }
+  .footer .footer__container .footer__inner .footer__box {
+    width: clamp(200px, 100%, 430px);
   }
 }/*# sourceMappingURL=style-responsove.css.map */

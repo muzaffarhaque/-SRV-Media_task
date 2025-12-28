@@ -1,11 +1,11 @@
 .button {
-  
+
     border: none;
     cursor: pointer;
     font-weight: 600;
 }
-.button--secondary,
-.button--primary {
+.button--primary,
+.button--secondary {
     color: var(--color-primary);
     height: 60px;
     width: 100%;
@@ -14,12 +14,28 @@
     align-items: center;
     justify-content: center;
     border: 2px solid var(--color-secondary);
-    background-color: var(--color-white);
     border-radius: 8px 4px 4px 8px;
     overflow: hidden;
+    background: linear-gradient(to right, var(--color-secondary) 100%, transparent 0) no-repeat, var(--color-white);
+    transition:all 0.8s ease;
+    background-size: 0 100%;
+    background-position: left center;
 }
-.button--secondary .arrow-box,
-.button--primary .arrow-box {
+
+.button--secondary:hover,
+.button--primary:hover {
+    background-size: 200% 100%;
+    transition:all 1s ease;
+    background-position: left bottom;
+    color: #fff;
+}
+.button--secondary:hover{color: var(--color-primary);}
+.button--secondary .arrow-box > img,
+.button--primary:hover .arrow-box > img {
+    transform: rotate(45deg);
+}
+.button--primary .arrow-box,
+.button--secondary .arrow-box {
     display: inline-block;
     display: flex;
     align-items: center;
@@ -31,23 +47,27 @@
     background: var(--color-secondary);
 
 }
-.button--secondary .arrow-box{
-  background: var(--color-white);
+.button--secondary .arrow-box {
+    background: var(--color-white);
 }
-.button--secondary p,
-.button--primary  p {
+.button--primary p,
+.button--secondary p {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .button--secondary {
     background: var(--color-secondary);
     color: var(--color-white);
 }
-
+.button--secondary:hover {
+    background: var(--color-white);
+    color: var(--color-primary);  
+     background-size: 200% 100%;
+}
 .input {
     width: 100%;
     padding: 12px;
@@ -55,9 +75,7 @@
     border-radius: 6px;
     border: 1px solid #ddd;
 }
-.input-box{
-
-}
+.input-box {}
 .card {
     padding: 40px;
     border-radius: var(--radius-md);
