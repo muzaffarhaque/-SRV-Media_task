@@ -15,7 +15,7 @@
   top: 10px;
   position: absolute;
 }
-
+/* ------------------- HERO SECTION START --------------------------- */
 .hero {
   background: linear-gradient(89.72deg, #000E38 0.22%, #3F186A 52.52%);
   max-height: 720px;
@@ -195,7 +195,11 @@
   text-align: start;
   resize: none;
 }
-
+/* ------------------- HERO SECTION START --------------------------- */
+/*  */
+/*  */
+/*  */
+/* =================== 2nd section start ===================== */
 .stats {
   padding: clamp(40px, 5vw, 80px) 0;
 }
@@ -229,7 +233,15 @@
 .stats .stats__grid .stats__item h3 {
   font-weight: 700;
 }
-
+/* =================== 2nd section start ===================== */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
 .schools {
   padding: 80px 0;
 }
@@ -301,6 +313,15 @@
     transform: translateX(-50%);
   }
 }
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
 .categories {
   padding: 80px 0;
 }
@@ -347,7 +368,15 @@
   line-height: 1.5em;
   font-weight: 400;
 }
-
+/*  */
+/*  */
+/*  */
+/*  */
+/*  *//*  */
+/*  */
+/*  */
+/*  */
+/*  */
 .appointment {
   background: linear-gradient(270deg, rgba(234, 215, 255, 0.368627451) 28%, #dec1ff 61%), url("../Images/pre-shudule.jpg") no-repeat right/cover;
   overflow-x: hidden;
@@ -389,7 +418,11 @@
   line-height: 1.2em;
   margin-bottom: 40px;
 }
-
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
 .exhibition {
   padding: 80px 0;
   background: url("../Images/BG.png") no-repeat top/cover;
@@ -461,7 +494,11 @@
 .exhibition .exhibition__controls .exhibition__btn--next {
   background-color: #ffffff;
 }
-
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
 .footer {
   padding: 58px 0 92px 0;
   text-align: center;
@@ -527,4 +564,4 @@
   background-color: var(--color-white);
   text-align: center;
   font-size: 16px;
-}/*# sourceMappingURL=sections.css.map */
+}
